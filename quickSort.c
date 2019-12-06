@@ -32,14 +32,15 @@ void quickSort(int *a, int left, int right) {
 int main() {
 	srand((unsigned)time(0));
 	int test[LEN];
+	int i = 0;
 	printf("\n==========乱序数组==========");
-	for (int i = 0; i < LEN; i++) {
+	for (i = 0; i < LEN; i++) {
 		test[i] = rand() % LIMIT;
-		printf("%d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
+		printf("%10d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
 	}
 	quickSort(test, 0, LEN - 1);
 	printf("\n==========快速排序后==========\n");
-	for (int i = 0; i < 100; i++)
-		printf("%d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
+	for (i = 0; i < 100; i++)
+		printf("%10d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
 	return 0;
 }
