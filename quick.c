@@ -11,14 +11,14 @@ int partition(int *p, int low, int high)
 {
 	int pivotkey;
 	int m = low + (high - low) / 2;
-	/*
+
 	if (p[low] > p[high])
 		swap(p, low, high);
 	if (p[m] > p[high])
 		swap(p, high, m);
 	if (p[m] > p[low])
 		swap(p, m, low);
-*/
+
 	pivotkey = p[low];
 
 	p[0] = pivotkey;
