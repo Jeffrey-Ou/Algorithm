@@ -30,6 +30,7 @@ void quickSort(int *a, int left, int right) {
 }
 
 int main() {
+	int begin, end;
 	srand((unsigned)time(0));
 	int test[LEN];
 	int i = 0;
@@ -38,9 +39,13 @@ int main() {
 		test[i] = rand() % LIMIT;
 		printf("%10d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
 	}
-	quickSort(test, 0, LEN - 1);
+	begin = clock();
+	for (i = 0; i < 100; i++)
+		quickSort(test, 0, LEN - 1);
+	end = clock();
 	printf("\n==========快速排序后==========\n");
 	for (i = 0; i < 100; i++)
 		printf("%10d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
+	printf("run time is %dms\n", end - begin);
 	return 0;
 }

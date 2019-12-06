@@ -1,4 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 void swap(int *p, int low, int high)
 {
@@ -51,11 +53,14 @@ int main()
 	int i;
 	int low = 1;
 	int high = 10;
-
+	int begin, end;
+	begin = clock();
 	sort(b, low, high);
 	printf("quick sort: ");
 	for(i = 1; i < 11; i++)
 		printf("%d ",b[i]);
 	printf("\n");
+	end = clock();
+	printf("run time is %dms\n",end - begin);
 	return 0;
 }
