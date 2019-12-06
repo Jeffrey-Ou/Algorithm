@@ -33,7 +33,7 @@ int main() {
 	srand((unsigned)time(0));
 	int test[LEN];
 	int i = 0;
-	printf("\n==========乱序数组==========");
+	printf("\n==========乱序数组==========\n");
 	for (i = 0; i < LEN; i++) {
 		test[i] = rand() % LIMIT;
 		printf("%10d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
