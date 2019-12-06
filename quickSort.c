@@ -37,7 +37,7 @@ int main() {
 		test[i] = rand() % LIMIT;
 		printf("%d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
 	}
-	quicksort(test, 0, LEN - 1);
+	quickSort(test, 0, LEN - 1);
 	printf("\n==========快速排序后==========\n");
 	for (int i = 0; i < 100; i++)
 		printf("%d%c", test[i], (i + 1) % 10 ? ' ' : '\n');
